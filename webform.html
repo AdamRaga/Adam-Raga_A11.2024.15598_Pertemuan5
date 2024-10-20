@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <h3>DNCC</h3>
+        <div class="nav-links">
+          <button
+            class="btn btn-primary"
+            onclick="window.location.href='webform.html'"
+          >
+            Daftar
+          </button>
+        </div>
+      </nav>
+      <div class="centered-container">
+        <div class="form-container" id="form-container">
+          <h2 id="form-title">Daftar</h2>
+          <div id="form-content">
+            <form onsubmit="return kirim()">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control"
+                  id="floatingUsername"
+                  placeholder="username"
+                  required
+                />
+                <label for="floatingUsername">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="password"
+                  required
+                />
+                <label for="floatingPassword">Password</label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    onclick="togglePassword()"
+                  />Show Password
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-text text-start">
+                  <label>Jenis Kelamin</label><br />
+                </div>
+                <div class="form-check-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="Laki-Laki"
+                    name="gender"
+                    value="Laki-Laki"
+                    required
+                  />
+                  <label class="form-check-label" for="Laki-Laki"
+                    >Laki-Laki</label
+                  >
+                </div>
+                <div class="form-check-radio">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="Perempuan"
+                    name="gender"
+                    value="Perempuan"
+                    required
+                  />
+                  <label class="form-check-label" for="Perempuan"
+                    >Perempuan</label
+                  >
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-text text-start">
+                  <label>Tamatan Sekolah</label><br />
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="sd"
+                    name="sekolah"
+                    value="sd"
+                  />
+                  <label class="form-check-label" for="sd">SD</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="smp"
+                    name="sekolah"
+                    value="smp"
+                  />
+                  <label class="form-check-label" for="smp">SMP</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="sma"
+                    name="sekolah"
+                    value="sma"
+                  />
+                  <label class="form-check-label" for="sma">SMA</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="form-text text-start">
+                  <label for="fileUpload">Pilih File</label>
+                </div>
+                <input
+                  type="file"
+                  id="fileUpload"
+                  class="form-control"
+                  name="filename"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <select name="number" class="form-select" required>
+                  <option selected disabled>Angka</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit" value="submit">
+                Kirim
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
